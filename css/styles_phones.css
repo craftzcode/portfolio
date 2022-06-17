@@ -1,14 +1,18 @@
 /*iPhone dimension*/
 @media only screen and (max-width: 720px) {
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 html {
     width: 100%;
     height: 100%;
 };
 
 body {
-  width: 100%;
-  height: 100%;
+  max-width: 90%;
+  max-height: 90%;
   background-color: #0c0c0c; 
 };
 
@@ -62,8 +66,8 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 0.8rem;
+    padding: 0.8rem;
 };
 .container {
     background-color: transparent;
