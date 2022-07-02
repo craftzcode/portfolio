@@ -13,7 +13,10 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: #0c0c0c; }
+  background-color: BLACK;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 ul {
   font-family: Arial, Helvetica, sans-serif; }
@@ -53,11 +56,12 @@ span {
 
 .section {
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   z-index: 100;
-  width: 90%;
-  height: 70%;
+  min-width: 50%;
+  max-height: 70%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   align-content: center;
@@ -66,7 +70,7 @@ span {
 
 .container {
   background-color: transparent;
-  width: 95%;
+  min-width: 95%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,17 +79,17 @@ span {
   margin: 0.3rem; }
 
 .container-list {
-  width: 55vh; }
+  width: 50%; }
 
 .content {
-  width: 50%;
-  margin: 1rem; }
+  width: 100%;
+  padding: 0.5rem; }
 
 .brand-list {
   text-decoration: none;
   list-style: none;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-around; }
 
 .brand-list li {
   padding: 0.2rem;
@@ -124,7 +128,24 @@ span {
   background-image: linear-gradient(#1095c1, #1095c1);
   background-size: 0 100%;
   background-repeat: no-repeat;
-  transition: .4s; }
+  transition: .4s;
+  min-width: 25vh; }
 
 #typeit:hover {
   background-size: 100% 100%; }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center; }
+  h1 {
+    font-size: 2rem; }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  p {
+    font-size: 1rem; } }
